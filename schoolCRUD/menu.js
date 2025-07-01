@@ -6,12 +6,12 @@ function showMenu() {
     
     console.log('Choose one of the following options: \n');
     
-    console.log('------------ MENU ------------');
-    console.log('1. CREATE - Add a new student.');
-    console.log('2. READ - Show all students.  ');
-    console.log('3. UPDATE - Update student.   ');
-    console.log('4. DELETE - Remove a student. ')
-    console.log('------------------------------');
+    console.log('------------ MENU ------------  ');
+    console.log('1. CREATE - Add a new student.  ');
+    console.log('\n2. READ - Show all students.  ');
+    console.log('\n3. UPDATE - Update student.   ');
+    console.log('\n4. DELETE - Remove a student. ')
+    console.log('------------------------------\n');
     
 
     
@@ -27,16 +27,16 @@ function inputChoice() {
 function choiceHandling(choice) {
 
     switch (choice) {
-        case 1:
-            return;
-        case 2:
-            return;
-        case 3:
-            return;
-        case 4:
-            return;
+        case '1':
+            return true;
+        case '2':
+            return true;
+        case '3':
+            return true;
+        case '4':
+            return true;
         default:
-            console.log('Option does not exist!');
+            console.log('\nOption does not exist!\n');
             return false;
         }
     }
@@ -54,3 +54,6 @@ export default function MenuManager() {
     
     } while (!rightChoice)
 }
+
+
+MenuManager();
