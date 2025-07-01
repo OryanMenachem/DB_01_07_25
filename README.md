@@ -1,5 +1,4 @@
-schoolCRUD/ 
-├── app.js            
+schoolCRUD/           
 ├── DB/ 
 │   └── DB.txt
 ├── modules/          
@@ -7,5 +6,7 @@ schoolCRUD/
 │   ├── read.js 
 │   ├── update.js 
 │   ├── delete.js
-└── fileHelpers.js 
+│   └── fileHelpers.js 
+├── app.js  
+├── menu.js  
 └── README.md 
