@@ -55,7 +55,7 @@ function addStudent(studentObj) {
 
 const DBpath = 'C:/Users/om316/OneDrive/Desktop/JavaScript/DB_01_07_25/schoolCRUD/DB/DB.txt';
 
-fs.readFile(DBpath, 'utf-8', (err, data) => {
+readFile(DBpath, 'utf-8', (err, data) => {
 
   if (err) {console.error(err); return;}
 
@@ -66,7 +66,7 @@ fs.readFile(DBpath, 'utf-8', (err, data) => {
   jsonArray.push(studentObj);
 
 
-fs.writeFile(DBpath, JSON.stringify(jsonArray, null, 2), 'utf-8', (err) => {
+writeFile(DBpath, JSON.stringify(jsonArray, null, 2), 'utf-8', (err) => {
     
     if (err) { console.error(err); return; }
 
