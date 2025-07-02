@@ -1,3 +1,12 @@
 [
-    {"Name":"Oryan"}
-] 
+  {
+    "id": 0,
+    "name": "Oryan",
+    "school": "kodeCode"
+  },
+  {
+    "id": 1,
+    "name": "Daniel",
+    "school": "8200"
+  }
+]
