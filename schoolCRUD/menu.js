@@ -1,5 +1,5 @@
 import readline from 'readline-sync';
-
+import showFileContents from './modules/read.js';
 
 
 function showMenu() {
@@ -30,6 +30,7 @@ function choiceHandling(choice) {
         case '1':
             return true;
         case '2':
+            showFileContents();
             return true;
         case '3':
             return true;
@@ -42,7 +43,7 @@ function choiceHandling(choice) {
     }
             
             
-export default function MenuManager() {
+export default function menuManager() {
 
     let rightChoice = true;
 
@@ -56,4 +57,4 @@ export default function MenuManager() {
 }
 
 
-MenuManager();
+menuManager();

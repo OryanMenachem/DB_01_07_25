@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "name": "db_01_07_25",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OryanMenachem/Project_01_07_25.git"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OryanMenachem/Project_01_07_25/issues"
+  },
+  "homepage": "https://github.com/OryanMenachem/Project_01_07_25#readme",
+  "description": ""
 }
