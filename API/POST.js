@@ -1,4 +1,4 @@
-import addingObjToTheDB from '../schoolCRUD/modules/createAsync.js'
+import addingObjToTheDB from '../schoolCRUD/modules/create.js'
 
 const path = "C:/Users/om316/OneDrive/Desktop/JavaScript/Project_01_07_25/schoolCRUD/DB/studentsDB.txt"
 
@@ -11,10 +11,15 @@ export default  function post(req, res) {
     })
 
      req.on('end', async ()=> {
+     
+     try {
 
      await addingObjToTheDB(path, body);
+     
+     }
+     catch (err) {err.message}
 
-     res.end();
+     res.end("The object was written successfully");
 
     })
 }

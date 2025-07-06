@@ -1,6 +1,4 @@
 import {createServer} from 'node:http';
-import getDbContents from '../schoolCRUD/modules/readAsync.js'
-import addingObjToTheDB from '../schoolCRUD/modules/createAsync.js'
 import get from '../API/GET.js'
 import post from '../API/POST.js';
 
@@ -34,7 +32,9 @@ server.listen(PORT, () => {
 })
 
 
+// curl http://localhost:4546/students
 
+// curl -X POST http://localhost:4546/create -H "Content-Type: application/json" -d '{"id": , "name" : "", "school": }'
 
 
 
