@@ -26,6 +26,7 @@ function inputStudentName(){
     studentName = readline.question(`> `)
 
     if (studentName) {return studentName}
+    
     console.log(`Student name not entered!`);
     
     }
@@ -75,6 +76,7 @@ fs.writeFile(DBpath, JSON.stringify(jsonArray, null, 2), 'utf-8', (err) => {
   });
 });
 }
+
 
 export default function addStudentManager() {
 
