@@ -1,86 +1,45 @@
-import readline from 'readline-sync';
-import fs from 'fs';
+import * as fsp from 'node:fs/promises';
+import dbContents from './read.js'
 
 
 
-function createStudentObject() {
-
-    const studentObj = {
-        id: null, 
-        name: inputStudentName(), 
-        school: inputiStudentSchool()
-    };
-    
-    return studentObj
-}
 
 
+export default async function addingObjToTheDB(dbPath, obj) 
+{
+    let dbContentArray = await dbContents(dbPath);
 
-function inputStudentName(){
+    obj = JSON.parse(obj)
+ 
+    dbContentArray.push(obj);
 
- let studentName;
-
- while(true) {
-
-    console.log(`Please enter the student name:`);
-    studentName = readline.question(`> `)
-
-    if (studentName) {return studentName}
-    
-    console.log(`Student name not entered!`);
+    await writeToDB(dbPath , dbContentArray );
     
     }
-};
-
-
-function inputiStudentSchool(){
-     
-    let schoolName;
-
-    while(true) {
-
-        console.log(`Please enter the school name:`);
-        schoolName = readline.question(`> `)
-
-        if (schoolName) {return schoolName}
-        console.log(`School name not entered!`);
-        
-        }
-};
-
-
-
-
-
-function addStudent(studentObj) {
-
-const DBpath = 'C:/Users/om316/OneDrive/Desktop/JavaScript/DB_01_07_25/schoolCRUD/DB/DB.txt';
-
-fs.readFile(DBpath, 'utf-8', (err, data) => {
-
-  if (err) {console.error(err); return;}
-
-  const jsonArray = JSON.parse(data); 
-   
-  studentObj.id = jsonArray.length
-
-  jsonArray.push(studentObj);
-
-
-fs.writeFile(DBpath, JSON.stringify(jsonArray, null, 2), 'utf-8', (err) => {
+ 
     
-    if (err) { console.error(err); return; }
+    
 
-    console.log('student added successfully!');
 
-  });
-});
+    
+    
+
+       
+
+
+async function writeToDB(dbPath, content) {
+
+       try {
+
+        await fsp.writeFile(dbPath, JSON.stringify(content, null, 2))
+
+        console.log('\nThe object was added successfully.\n')
+    } 
+
+    catch(error) {console.log(error.message)}
+
+
 }
 
 
-export default function addStudentManager() {
 
-    const studentObj = createStudentObject();
-
-    addStudent(studentObj);
-}

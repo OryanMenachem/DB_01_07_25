@@ -3,5 +3,15 @@
     "id": 0,
     "name": "Oryan",
     "school": "kodeCode"
+  },
+  {
+    "id": 1,
+    "name": "David",
+    "school": "school1"
+  },
+  {
+    "id": 2,
+    "name": "Yonatan",
+    "school": "school2"
   }
 ]
